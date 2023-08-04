@@ -10,6 +10,8 @@ public class Main {
         
         CreateTable table = new CreateTable();
         table.createTables();
+        
+        
        
 
         while (true) {
@@ -28,8 +30,8 @@ public class Main {
                     admin.adminMenu();
                     break;
                 case 2:
-                    //Student student = new Student();
-                    //student.studentMenu();
+                    Student student = new Student();
+                    student.studentMenu();
                     break;
                 case 3:
                     System.out.println("Exiting the application. Goodbye!");

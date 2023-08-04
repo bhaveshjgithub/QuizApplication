@@ -9,6 +9,7 @@ import java.util.Set;
 public class Student {
     public void studentMenu() {
         Scanner scanner = new Scanner(System.in);
+        
 
         System.out.println("=== Student Menu ===");
         System.out.println("1. Register Students");
