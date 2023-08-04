@@ -104,7 +104,7 @@ public class InsertData {
     }
     
     
-    
+     // If This Questions Is AVailable Then It will not Add.
     public void availableQuizQuestions() {
         try {
         	
@@ -140,6 +140,111 @@ public class InsertData {
             
             ps2.executeUpdate();
             ps2.close();
+            
+            PreparedStatement ps3 = con.prepareStatement(Query);
+
+            ps3.setString(1, "Which Java access modifier provides the highest level of visibility?");
+            ps3.setString(2, "private");
+            ps3.setString(3, "default");
+            ps3.setString(4, "protected");
+            ps3.setString(5, "public");
+            ps3.setInt(6, 4);
+
+            ps3.executeUpdate();
+            ps3.close();
+
+            
+            PreparedStatement ps4 = con.prepareStatement(Query);
+
+            ps4.setString(1, "What is the purpose of the 'this' keyword in Java?");
+            ps4.setString(2, "Refer to the current instance of the class");
+            ps4.setString(3, "Declare a new object");
+            ps4.setString(4, "Access superclass members");
+            ps4.setString(5, "Terminate program execution");
+            ps4.setInt(6, 1);
+
+            ps4.executeUpdate();
+            ps4.close();
+
+            
+            PreparedStatement ps5 = con.prepareStatement(Query);
+
+            ps5.setString(1, "Which loop construct is used to iterate a specific number of times?");
+            ps5.setString(2, "for");
+            ps5.setString(3, "while");
+            ps5.setString(4, "do-while");
+            ps5.setString(5, "foreach");
+            ps5.setInt(6, 1);
+
+            ps5.executeUpdate();
+            ps5.close();
+
+            
+            PreparedStatement ps6 = con.prepareStatement(Query);
+
+            ps6.setString(1, "In Java, which data type is used to store floating-point numbers with double precision?");
+            ps6.setString(2, "float");
+            ps6.setString(3, "double");
+            ps6.setString(4, "decimal");
+            ps6.setString(5, "real");
+            ps6.setInt(6, 2);
+
+            ps6.executeUpdate();
+            ps6.close();
+
+
+            PreparedStatement ps7 = con.prepareStatement(Query);
+
+            ps7.setString(1, "What is the Java keyword used to create an instance of a class?");
+            ps7.setString(2, "create");
+            ps7.setString(3, "new");
+            ps7.setString(4, "instance");
+            ps7.setString(5, "alloc");
+            ps7.setInt(6, 2);
+
+            ps7.executeUpdate();
+            ps7.close();
+
+            
+            PreparedStatement ps8 = con.prepareStatement(Query);
+
+            ps8.setString(1, "Which Java data type is used to represent a single 16-bit Unicode character?");
+            ps8.setString(2, "char");
+            ps8.setString(3, "byte");
+            ps8.setString(4, "string");
+            ps8.setString(5, "int");
+            ps8.setInt(6, 1);
+
+            ps8.executeUpdate();
+            ps8.close();
+
+            
+            PreparedStatement ps9 = con.prepareStatement(Query);
+
+            ps9.setString(1, "What is the process of converting an object into a byte stream called in Java?");
+            ps9.setString(2, "Serialization");
+            ps9.setString(3, "Conversion");
+            ps9.setString(4, "Casting");
+            ps9.setString(5, "Parsing");
+            ps9.setInt(6, 1);
+
+            ps9.executeUpdate();
+            ps9.close();
+
+            
+            PreparedStatement ps10 = con.prepareStatement(Query);
+
+            ps10.setString(1, "Which Java operator is used to compare two values for equality?");
+            ps10.setString(2, "==");
+            ps10.setString(3, "!=");
+            ps10.setString(4, "<=");
+            ps10.setString(5, "=>");
+            ps10.setInt(6, 1);
+            
+            
+            ps10.executeUpdate();
+            ps10.close();
+            
 
             System.out.println("Demo questions also inserted successfully!");
 

@@ -24,20 +24,21 @@ public class Quiz {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("=== Quiz Started ===");
-        System.out.println("Hello, " + studentName + "! Please answer the following questions:");
+        System.out.println("Hello " + studentName + "... Answer the following questions:");
 
         
 
-        for (Question question : questions) {
-            System.out.println("\n" + question.getQuestionText());
-            System.out.println("1. " + question.getOption1());
-            System.out.println("2. " + question.getOption2());
-            System.out.println("3. " + question.getOption3());
-            System.out.println("4. " + question.getOption4());
+        for (Question que : questions) {
+        	
+            System.out.println("\n" + que.getQuestionText());
+            System.out.println("1. " + que.getOption1());
+            System.out.println("2. " + que.getOption2());
+            System.out.println("3. " + que.getOption3());
+            System.out.println("4. " + que.getOption4());
             System.out.println("Enter your Answer (1, 2, 3, or 4): ");
             
             int userChoice = sc.nextInt();
-            if (userChoice == question.getCorrectOption()) {
+            if (userChoice == que.getCorrectOption()) {
                 System.out.println("Correct!");
                 
                 score++;
@@ -61,6 +62,8 @@ public class Quiz {
        
     }
     
+    //Not Stored In Database It will Calculate On The BAsis of Score.
+    
     private String calculateGrade(int score) {
         if (score >= 8) {
             return "A";
@@ -76,7 +79,7 @@ public class Quiz {
     }
 
 
-    
+
 
     
     private void storeQuizResult(int studentId, String studentName, int score, String grade) {
@@ -226,7 +229,7 @@ public class Quiz {
     } else {
         for (int i = 0; i < quizResults.size(); i++) {
             QuizResult result = quizResults.get(i);
-            String grade = grades.get(i); // Retrieve the grade from the ArrayList
+            String grade = grades.get(i); // Retrieve grade from the ArrayList
             System.out.println("Student ID: " + result.getStudentId());
             System.out.println("Student Name: " + result.getStudentName());
             System.out.println("Score: " + result.getScore());
