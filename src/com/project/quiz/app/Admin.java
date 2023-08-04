@@ -11,8 +11,8 @@ public class Admin {
     public void adminMenu() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("If You Are Praveen Sir Then \nID = admin  \nPass = admin123");
-        
+        System.out.println("If You Are Praveen Sir Then Enter: \nID = admin  \nPass = admin123");
+        System.out.println("\n=== Admin Credentials ===");
         System.out.println("Enter Admin ID: ");
         String adminId = scanner.nextLine();
 
@@ -39,9 +39,10 @@ public class Admin {
             System.out.println("=== Admin Menu ===");
             System.out.println("1. Register Students");
             System.out.println("2. Create Quiz Questions");
-            System.out.println("3. Display Quiz Results");
-            System.out.println("4. Display Result By StudentId");
-            System.out.println("5. Back to Main Menu");
+            System.out.println("3. Insert Demo Question");
+            System.out.println("4. Display Quiz Results");
+            System.out.println("5. Display Result By StudentId");
+            System.out.println("6. Back to Main Menu");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
 
@@ -51,18 +52,21 @@ public class Admin {
                     break;
                 case 2:
                     createQuizQuestions();
-                    InsertData insetdata = new InsertData();
-                    insetdata.availableQuizQuestions();
-                    break;
                     
-                case 3:
-                    displayQuizResults();
+                    break;
+                case 3: 
+                	InsertData insetdata = new InsertData();
+                    insetdata.availableQuizQuestions();
                     
                     break;
                 case 4:
+                    displayQuizResults();
+                    
+                    break;
+                case 5:
                 	displayQuizResultsID();
                 	break;
-                case 5:
+                case 6:
                     System.out.println("Returning to the main menu.");
                     return;
                 default:

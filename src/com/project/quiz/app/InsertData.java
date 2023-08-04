@@ -104,7 +104,7 @@ public class InsertData {
     }
     
     
-     // If This Questions Is AVailable Then It will not Add.
+     // If This Questions Is AVailable Then It will not Add. Bu its Not Working
     public void availableQuizQuestions() {
         try {
         	
@@ -246,7 +246,7 @@ public class InsertData {
             ps10.close();
             
 
-            System.out.println("Demo questions also inserted successfully!");
+            System.out.println("Demo questions inserted successfully!!");
 
             con.close();
         } catch (Exception e) {
