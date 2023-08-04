@@ -11,7 +11,7 @@ public class Admin {
     public void adminMenu() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("If You Are Praveen Sir Then \nID = admin  \nPass = admin123");
+        System.out.println("If You Are Praveen Sir Then Enter: \nID = admin  \nPass = admin123");
         
         System.out.println("Enter Admin ID: ");
         String adminId = scanner.nextLine();
