@@ -18,7 +18,7 @@ public class CreateTable {
             // Load the Driver
             Class.forName("com.mysql.cj.jdbc.Driver");
 
-            // Establish the connection
+            // Establish connection
             Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "root");
 
             // Create a new schema
@@ -49,6 +49,9 @@ public class CreateTable {
                     + "firstname VARCHAR(50) NOT NULL,"
                     + "lastname VARCHAR(50) NOT NULL,"
                     + "address VARCHAR(100),"
+                    + "mobilenumber INT,"
+                    + "username VARCHAR(100),"
+                    + "password VARCHAR(100),"
                     + "city VARCHAR(50)"
                     + ")";
 
